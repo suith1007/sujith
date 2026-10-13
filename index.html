@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sujith Lingam | AI & Data Science Student | Aspiring Full Stack Developer</title>
+<meta name="description" content="Explore the portfolio of Sujith Lingam, a B.Tech Artificial Intelligence and Data Science student graduating in 2028, with interests in full stack development, UI/UX design, and software projects.">
+<meta property="og:title" content="Sujith Lingam | AI & Data Science Student">
+<meta property="og:description" content="B.Tech AI & Data Science student, aspiring full stack developer and UI/UX enthusiast.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080B12; --surface:#101827; --primary:#3B82F6; --accent:#22D3EE;
+  --text:#F8FAFC; --muted:#A7B0C0; --line:rgba(255,255,255,.09);
+  --glass:rgba(16,24,39,.65);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--bg);color:var(--text);font:400 16px/1.7 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Poppins,Inter,sans-serif;line-height:1.2}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.bg-blobs{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.bg-blobs i{position:absolute;border-radius:50%;filter:blur(110px);opacity:.28;animation:drift 18s ease-in-out infinite alternate}
+.bg-blobs i:nth-child(1){width:420px;height:420px;background:var(--primary);top:-100px;left:-80px}
+.bg-blobs i:nth-child(2){width:360px;height:360px;background:var(--accent);bottom:-80px;right:-60px;animation-delay:-6s}
+@keyframes drift{to{transform:translate(60px,40px)}}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(8,11,18,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:700 20px Poppins;letter-spacing:.5px;background:linear-gradient(90deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.links{display:flex;gap:26px;align-items:center;list-style:none}
+.links a{font-size:14.5px;color:var(--muted);transition:color .2s}
+.links a:hover,.links a.active{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;font:500 15px Inter;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+.btn.primary{background:linear-gradient(90deg,var(--primary),var(--accent));color:#04101c;font-weight:600;border:0}
+.btn.primary:hover{box-shadow:0 8px 28px rgba(34,211,238,.28)}
+.btn[aria-disabled=true]{opacity:.55;cursor:not-allowed;transform:none}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;width:42px;height:42px;font-size:20px;cursor:pointer}
+
+/* hero */
+.hero{padding:72px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,5vw,3.8rem);font-weight:700;margin-bottom:14px}
+.hero h1 span{background:linear-gradient(90deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.typed{font:600 clamp(1.1rem,2.4vw,1.5rem) Poppins;color:var(--accent);min-height:2em}
+.typed::after{content:"";display:inline-block;width:2px;height:1.1em;background:var(--accent);margin-left:4px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.lead{color:var(--muted);max-width:56ch;margin:16px 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.socials{display:flex;gap:12px}
+.socials a{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line);background:var(--glass);transition:border-color .2s,transform .2s}
+.socials a:hover{border-color:var(--accent);transform:translateY(-2px)}
+.socials svg{width:20px;height:20px;fill:currentColor}
+.photo{position:relative;max-width:360px;justify-self:center;width:100%}
+.photo::before{content:"";position:absolute;inset:-18px;border-radius:36px;background:linear-gradient(135deg,var(--primary),var(--accent));filter:blur(46px);opacity:.38}
+.frame{position:relative;border-radius:28px;padding:2px;background:linear-gradient(135deg,var(--primary),var(--accent) 60%,transparent)}
+.frame .img{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:3/4;background:var(--surface)}
+.frame img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}
+.frame .img::after{content:"";position:absolute;inset:auto 0 0 0;height:38%;background:linear-gradient(to top,rgba(8,11,18,.82),transparent)}
+.frame .fallback{position:absolute;inset:0;display:none;place-items:center;font:700 72px Poppins;color:var(--accent)}
+.chip{position:absolute;z-index:2;padding:8px 14px;border-radius:999px;font:500 13px Inter;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(10px);animation:float 6s ease-in-out infinite}
+.chip.a{top:8%;left:-22px}.chip.b{bottom:22%;right:-18px;animation-delay:-2s}.chip.c{bottom:6%;left:-10px;animation-delay:-4s}
+@keyframes float{50%{transform:translateY(-8px)}}
+
+/* generic */
+.head{margin-bottom:44px}
+.head h2{font-size:clamp(1.8rem,3.6vw,2.5rem);margin-bottom:10px}
+.head p{color:var(--muted);max-width:58ch}
+.card{background:var(--glass);border:1px solid var(--line);border-radius:18px;padding:26px;backdrop-filter:blur(10px);box-shadow:0 10px 36px rgba(0,0,0,.28)}
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:36px;align-items:start}
+.about p{color:var(--muted);margin-bottom:16px}
+.facts{display:grid;gap:14px}
+.facts .card{padding:18px 22px}
+.facts small{color:var(--accent);font-weight:500}
+.facts b{display:block;font:600 16px Poppins;margin-top:2px}
+.card h3{font-size:1.05rem;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{padding:6px 12px;border-radius:999px;font-size:13px;border:1px solid var(--line);background:rgba(59,130,246,.1);color:#cfe3ff;transition:border-color .2s}
+.tag:hover{border-color:var(--accent)}
+.note{margin-top:18px;color:var(--muted);font-size:14px}
+
+/* timeline */
+.tl{position:relative;padding-left:30px;display:grid;gap:22px}
+.tl::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--primary),var(--accent));opacity:.5}
+.tl .item{position:relative}
+.tl .item::before{content:"";position:absolute;left:-30px;top:30px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.status{display:inline-block;font-size:12.5px;font-weight:500;color:var(--accent);border:1px solid rgba(34,211,238,.4);border-radius:999px;padding:3px 11px;margin-bottom:10px}
+.item p{color:var(--muted)}
+.item h3{margin-bottom:4px}
+.item .sub{color:#cfe3ff;font-size:14.5px;margin-bottom:8px}
+
+/* projects */
+.proj{overflow:hidden;padding:0;display:flex;flex-direction:column}
+.proj .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#0f2a4a,#0b3b4a 55%,#134e4a);display:grid;place-items:center;position:relative}
+.proj .thumb svg{width:64px;height:64px;stroke:var(--accent);fill:none;stroke-width:1.5;opacity:.9}
+.proj .thumb.soon{background:repeating-linear-gradient(45deg,#0d1422,#0d1422 12px,#101827 12px,#101827 24px)}
+.proj .thumb.soon svg{stroke:var(--muted);opacity:.5}
+.proj .body{padding:22px;display:flex;flex-direction:column;gap:12px;flex:1}
+.proj p{color:var(--muted);font-size:15px}
+.proj .row{display:flex;gap:10px;margin-top:auto;flex-wrap:wrap}
+.proj .btn{padding:9px 16px;font-size:14px}
+.featured{grid-column:1/-1;flex-direction:row}
+.featured .thumb{flex:0 0 42%;aspect-ratio:auto;min-height:260px}
+dialog{margin:auto;background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:20px;padding:30px;max-width:540px;width:calc(100% - 32px)}
+dialog::backdrop{background:rgba(0,0,0,.65);backdrop-filter:blur(4px)}
+dialog ul{margin:14px 0 20px 20px;color:var(--muted)}
+dialog h3{margin-bottom:8px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px}
+.contact .info{display:grid;gap:14px;align-content:start}
+.contact .info a{display:flex;gap:12px;align-items:center;padding:16px 20px;border-radius:14px;border:1px solid var(--line);background:var(--glass);transition:border-color .2s}
+.contact .info a:hover{border-color:var(--accent)}
+.contact .info small{display:block;color:var(--muted);font-size:13px;line-height:1.3}
+form{display:grid;gap:16px}
+label{font-size:14px;font-weight:500;display:grid;gap:6px}
+input,textarea{width:100%;background:rgba(8,11,18,.7);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--text);font:inherit}
+textarea{min-height:130px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--accent);border-color:transparent}
+.err{color:#fda4af;font-size:13px;min-height:1em}
+[aria-invalid=true]{border-color:#fb7185}
+.formnote{font-size:13.5px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:44px 0 36px;margin-top:30px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:center}
+footer p{color:var(--muted);font-size:14px}
+footer .fl{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+footer .fl a:hover{color:var(--text)}
+.copy{width:100%;text-align:center;font-size:13px;color:var(--muted);padding-top:20px;border-top:1px solid var(--line)}
+
+@media(max-width:900px){
+  .hero .wrap,.about,.contact{grid-template-columns:1fr}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .featured{flex-direction:column}.featured .thumb{flex:none;aspect-ratio:16/9;min-height:0}
+  .photo{order:-1;max-width:280px}
+}
+@media(max-width:720px){
+  .menu{display:block}
+  .links{position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);display:none;padding:10px 24px 18px}
+  .links.open{display:flex}
+  .links li{padding:10px 0}
+  .links .btn{justify-content:center}
+  .g3,.g2{grid-template-columns:1fr}
+  section{padding:72px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="bg-blobs" aria-hidden="true"><i></i><i></i></div>
+
+<header>
+  <nav class="wrap" aria-label="Main">
+    <a href="#home" class="logo" aria-label="Sujith Lingam, home">SL</a>
+    <button class="menu" id="menu" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="links" id="links">
+      <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li><li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="btn primary">Let's Connect</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Hi, I'm <span>Sujith Lingam</span></h1>
+      <div class="typed" id="typed" aria-live="off"></div>
+      <p class="lead">I'm a passionate B.Tech student specializing in Artificial Intelligence and Data Science, exploring the intersection of intelligent systems, modern web development, and user-centered design. I enjoy learning new technologies and building practical projects that solve real-world problems.</p>
+      <div class="cta">
+        <a href="#projects" class="btn primary">Explore My Projects</a>
+        <a id="resumeBtn" class="btn" href="#contact" aria-disabled="true">Resume coming soon</a>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+      <div class="socials" id="socials"></div>
+    </div>
+    <div class="photo">
+      <span class="chip a">React.js</span><span class="chip b">Python</span><span class="chip c">UI/UX</span>
+      <div class="frame"><div class="img">
+        <img src="images/sujith.jpg" alt="Portrait of Sujith Lingam" width="540" height="720" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="fallback" aria-hidden="true">SL</div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about"><div class="wrap">
+  <div class="head"><h2>About Me</h2></div>
+  <div class="about">
+    <div>
+      <p>I'm Sujith Lingam, a third-year B.Tech student in Artificial Intelligence and Data Science, expecting to graduate in 2028. I'm interested in software development, artificial intelligence, modern web technologies, and UI/UX design.</p>
+      <p>Alongside my academic journey, I'm pursuing Full Stack Development training through an Honours Diploma in Full Stack Developer (HDFC) program and gaining practical exposure to UI/UX through an internship at ST Software.</p>
+      <p>I enjoy transforming ideas into functional applications and exploring how thoughtful design and technology can improve user experiences. My goal is to strengthen my technical foundation, build meaningful projects, and grow into a skilled software developer.</p>
+    </div>
+    <div class="facts">
+      <div class="card"><small>Degree</small><b>B.Tech in AI &amp; Data Science</b></div>
+      <div class="card"><small>Graduation</small><b>2028</b></div>
+      <div class="card"><small>Focus</small><b>Full Stack Development, AI &amp; Data Science, UI/UX</b></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="head"><h2>Technical Skills</h2><p>Technologies I use and am actively learning.</p></div>
+  <div class="grid g3" id="skillGrid"></div>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <div class="head"><h2>Education</h2></div>
+  <div class="tl" id="eduList"></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="head"><h2>Training &amp; Internship</h2></div>
+  <div class="tl" id="expList"></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="head"><h2>Featured Projects</h2><p>Real work only. New projects are added as I finish them.</p></div>
+  <div class="grid g2" id="projGrid"></div>
+</div></section>
+
+<section id="certifications"><div class="wrap">
+  <div class="head"><h2>Certifications &amp; Learning Journey</h2><p>Certificates appear here after I earn them.</p></div>
+  <div class="grid g2" id="certList"></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="head"><h2>Let's Build Something Together</h2><p>I'm open to connecting with fellow developers, learning from experienced professionals, collaborating on interesting projects, and exploring suitable internship opportunities.</p></div>
+  <div class="contact">
+    <div class="info" id="contactInfo"></div>
+    <form id="form" novalidate>
+      <label>Full Name<input name="name" autocomplete="name" required><span class="err" role="alert"></span></label>
+      <label>Email Address<input name="email" type="email" autocomplete="email" required><span class="err" role="alert"></span></label>
+      <label>Subject<input name="subject" required><span class="err" role="alert"></span></label>
+      <label>Message<textarea name="message" required></textarea><span class="err" role="alert"></span></label>
+      <button class="btn primary" type="submit">Send Message</button>
+      <p class="formnote" id="formNote">No mail server is connected yet, so this opens your email app with the message filled in. Nothing is sent until you press send there.</p>
+    </form>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div><b style="font-family:Poppins">Sujith Lingam</b><p>Designed with curiosity and built with code.</p></div>
+  <div class="fl" id="footLinks"></div>
+  <p class="copy">&copy; <span id="year"></span> Sujith Lingam. All rights reserved.</p>
+</div></footer>
+
+<dialog id="dlg"><h3 id="dTitle"></h3><div id="dBody"></div><button class="btn" id="dClose">Close</button></dialog>
+
+<script>
+/* ============ EDIT YOUR CONTENT HERE ============ */
+const PROFILE = {
+  email: "Sujith65555@gmail.com",
+  linkedin: "https://www.linkedin.com/in/sujith-lingam-b8004a38a/",
+  github: "https://github.com/suith1007",
+  resumeUrl: "",            // e.g. "resume.pdf" once you add your PDF next to this file
+  roles: ["AI & Data Science Student", "Full Stack Developer in Progress", "UI/UX Design Enthusiast"]
+};
+const SKILLS = {
+  "Programming Languages": ["Python", "Java", "C++"],
+  "Frontend Development": ["HTML5", "CSS3", "JavaScript", "React.js"],
+  "Tools & Version Control": ["Git", "GitHub"],
+  "UI/UX Design": ["UI design fundamentals", "UX design fundamentals"],
+  "AI & Data Science": ["Studying AI & Data Science (B.Tech)"],
+  "Backend & Databases": []   // add only what you have actually used
+};
+const EDUCATION = [{
+  title: "Bachelor of Technology (B.Tech), Artificial Intelligence and Data Science",
+  sub: "DMI Engineering College",
+  status: "Third-year student · Expected graduation 2028",
+  text: "", extras: []   // add achievements, coursework, workshops later
+}];
+const EXPERIENCE = [
+  { title: "Honours Diploma in Full Stack Developer (HDFC)", sub: "", status: "In progress",
+    text: "I'm pursuing an Honours Diploma in Full Stack Developer (HDFC) to strengthen my understanding of web development and application building. This section will showcase the technologies, practical exercises, and projects completed during the program." },
+  { title: "UI/UX Internship", sub: "ST Software", status: "In progress",
+    text: "I'm gaining practical exposure to UI/UX design through an internship at ST Software, developing my understanding of user-centered design and digital product experiences." }
+];
+const PROJECTS = [
+  { title: "Online Tourism Management System", category: "Web Development", featured: true,
+    desc: "A web application concept designed to help users explore tourism destinations and access travel-related information through a convenient digital platform.",
+    stack: [],            // e.g. ["HTML","CSS","JavaScript"] once confirmed
+    github: "", demo: "",
+    details: ["Add the features you actually built here, for example: Destination listings, Search and filtering, Booking management."] },
+  { title: "Next Software Project", desc: "A future web or software project will appear here.", soon: true },
+  { title: "Future AI & Data Science Project", desc: "A future AI or data science project will appear here.", soon: true }
+];
+const CERTS = [
+  { title: "Honours Diploma in Full Stack Developer (HDFC)", status: "In progress · completion pending" }
+];
+/* ================================================== */
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ICON = {
+  gh:'<svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>',
+  li:'<svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>',
+  mail:'<svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zM2 5l10 8 10-8" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>'
+};
+const ext = 'target="_blank" rel="noopener noreferrer"';
+
+/* social + contact + footer */
+$('#socials').innerHTML =
+  `<a href="${PROFILE.github}" ${ext} aria-label="GitHub">${ICON.gh}</a>
+   <a href="${PROFILE.linkedin}" ${ext} aria-label="LinkedIn">${ICON.li}</a>
+   <a href="mailto:${PROFILE.email}" aria-label="Email">${ICON.mail}</a>`;
+$('#contactInfo').innerHTML =
+  `<a href="mailto:${PROFILE.email}"><span style="width:22px">${ICON.mail.replace('<svg','<svg width="22" height="22"')}</span><span><small>Email</small>${PROFILE.email}</span></a>
+   <a href="${PROFILE.linkedin}" ${ext}><span style="width:22px;fill:currentColor">${ICON.li.replace('<svg','<svg width="22" height="22"')}</span><span><small>LinkedIn</small>My LinkedIn profile</span></a>
+   <a href="${PROFILE.github}" ${ext}><span style="width:22px;fill:currentColor">${ICON.gh.replace('<svg','<svg width="22" height="22"')}</span><span><small>GitHub</small>My GitHub profile</span></a>`;
+$('#footLinks').innerHTML =
+  ['Home','About','Skills','Education','Experience','Projects','Contact'].map(n=>`<a href="#${n.toLowerCase()}">${n}</a>`).join('') +
+  `<a href="${PROFILE.github}" ${ext}>GitHub</a><a href="${PROFILE.linkedin}" ${ext}>LinkedIn</a><a href="mailto:${PROFILE.email}">Email</a>`;
+$('#year').textContent = new Date().getFullYear();
+
+/* resume button: only active when a real file is set */
+if (PROFILE.resumeUrl) {
+  const b = $('#resumeBtn');
+  b.textContent = 'Download Resume'; b.href = PROFILE.resumeUrl; b.setAttribute('download', '');
+  b.removeAttribute('aria-disabled'); b.classList.add('primary');
+}
+
+/* skills (empty groups are hidden) */
+$('#skillGrid').innerHTML = Object.entries(SKILLS).filter(([,v])=>v.length).map(([k,v])=>
+  `<div class="card"><h3>${esc(k)}</h3><div class="tags">${v.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div></div>`).join('');
+
+/* timelines */
+const tl = list => list.map(e => `<div class="item card"><span class="status">${esc(e.status)}</span>
+  <h3>${esc(e.title)}</h3>${e.sub?`<div class="sub">${esc(e.sub)}</div>`:''}
+  ${e.text?`<p>${esc(e.text)}</p>`:''}
+  ${(e.extras&&e.extras.length)?`<div class="tags" style="margin-top:12px">${e.extras.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div>`:''}</div>`).join('');
+$('#eduList').innerHTML = tl(EDUCATION);
+$('#expList').innerHTML = tl(EXPERIENCE);
+
+/* projects */
+const THUMB = '<svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>';
+const SOON = '<svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>';
+$('#projGrid').innerHTML = PROJECTS.map((p,i)=>`
+  <article class="card proj ${p.featured?'featured':''}">
+    <div class="thumb ${p.soon?'soon':''}">${p.soon?SOON:THUMB}</div>
+    <div class="body">
+      ${p.category?`<span class="status" style="align-self:flex-start">${esc(p.category)}</span>`:`<span class="status" style="align-self:flex-start;color:var(--muted);border-color:var(--line)">Coming soon</span>`}
+      <h3>${esc(p.title)}</h3><p>${esc(p.desc)}</p>
+      ${(p.stack&&p.stack.length)?`<div class="tags">${p.stack.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>`:''}
+      <div class="row">
+        ${p.soon?'':`<button class="btn primary" data-i="${i}">View Details</button>`}
+        ${p.github?`<a class="btn" href="${p.github}" ${ext}>GitHub</a>`:''}
+        ${p.demo?`<a class="btn" href="${p.demo}" ${ext}>Live Demo</a>`:''}
+      </div>
+    </div>
+  </article>`).join('');
+const dlg = $('#dlg');
+$('#projGrid').addEventListener('click', e => {
+  const b = e.target.closest('button[data-i]'); if(!b) return;
+  const p = PROJECTS[b.dataset.i];
+  $('#dTitle').textContent = p.title;
+  $('#dBody').innerHTML = `<p style="color:var(--muted)">${esc(p.desc)}</p><ul>${(p.details||[]).map(d=>`<li>${esc(d)}</li>`).join('')}</ul>`;
+  dlg.showModal();
+});
+$('#dClose').onclick = () => dlg.close();
+dlg.addEventListener('click', e => { if(e.target===dlg) dlg.close(); });
+
+/* certifications */
+$('#certList').innerHTML = CERTS.map(c=>`<div class="card"><span class="status">${esc(c.status)}</span><h3>${esc(c.title)}</h3></div>`).join('');
+
+/* typed headline */
+(function(){
+  const el = $('#typed'), R = PROFILE.roles;
+  if (matchMedia('(prefers-reduced-motion:reduce)').matches) { el.textContent = R[0]; return; }
+  let r=0,c=0,del=false;
+  (function tick(){
+    const w=R[r];
+    el.textContent = w.slice(0,c);
+    if(!del && c===w.length){ del=true; return setTimeout(tick,1600); }
+    if(del && c===0){ del=false; r=(r+1)%R.length; }
+    c += del?-1:1;
+    setTimeout(tick, del?35:70);
+  })();
+})();
+
+/* mobile menu */
+const menu=$('#menu'), links=$('#links');
+menu.onclick=()=>{const o=links.classList.toggle('open');menu.setAttribute('aria-expanded',o)};
+links.addEventListener('click',e=>{if(e.target.closest('a')){links.classList.remove('open');menu.setAttribute('aria-expanded',false)}});
+
+/* scroll spy */
+const navA=[...links.querySelectorAll('a:not(.btn)')];
+const io=new IntersectionObserver(es=>es.forEach(en=>{
+  if(en.isIntersecting) navA.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+en.target.id));
+}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('main section').forEach(s=>io.observe(s));
+
+/* contact form: validates, then opens the visitor's email app. Never claims "sent". */
+const form=$('#form'), note=$('#formNote');
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  let ok=true;
+  const rules={
+    name:v=>v.trim().length>=2||'Enter your full name.',
+    email:v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)||'Enter a valid email address, like name@example.com.',
+    subject:v=>v.trim().length>=3||'Enter a subject of at least 3 characters.',
+    message:v=>v.trim().length>=10||'Write a message of at least 10 characters.'
+  };
+  for(const [k,fn] of Object.entries(rules)){
+    const f=form.elements[k], r=fn(f.value), err=f.parentElement.querySelector('.err');
+    err.textContent = r===true?'':r;
+    f.setAttribute('aria-invalid', r!==true);
+    if(r!==true) ok=false;
+  }
+  if(!ok){ form.querySelector('[aria-invalid=true]').focus(); return; }
+  const d=Object.fromEntries(new FormData(form));
+  const body=`${d.message}\n\nFrom: ${d.name} <${d.email}>`;
+  location.href=`mailto:${PROFILE.email}?subject=${encodeURIComponent(d.subject)}&body=${encodeURIComponent(body)}`;
+  note.textContent='Your email app should open with the message ready. Press send there to deliver it. If nothing opened, email me directly at '+PROFILE.email+'.';
+});
+</script>
+</body>
+</html>
